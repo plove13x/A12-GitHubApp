@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>A12 GitHubApp</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="hero-unit">
+      <h1>GitHub Killer App</h1>
+        <div class="existingComments">Please select an issue from the list at the bottom of the page...</div>
+
+      <form id="issueMgmt">
+        <label>Title</label>    
+        <input type="text" name="title" value="">        
+        <label>Write a new comment:</label>
+        <textarea type="text" name="newComment" rows="4" cols="50"></textarea>
+        <button name="commentClose">Post Comment and Close Issue</button>
+        <button type="submit">Just Close the Issue, I've Got Nothing to Say to Jake</button>
+      </form>
+      <p>You sow Issuez</p>
+      <ul class="issueList"></ul>
+    </div>
+
+    <script src="scripts/vendor.js"></script>
+
+    <script src="scripts/token.js"></script>
+    
+
+
+    <script type="text/template" id="listTemplateScript">
+        <li><a href="" class="clickableList" data-id="<%= comments_url %>"><%= title %></a></li>
+    </script>
+
+    <script type="text/template" id="issueTemplateScript">   
+        <h4><%= body %></h4>
+    </script>
+
+
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
